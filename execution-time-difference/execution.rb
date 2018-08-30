@@ -75,7 +75,7 @@ def largest_contiguous_subsum_2(arr)
     #if current el is greater than max, update max
 
     #this doesn't freaking work
-    current_sum = 0 if max_sum < el
+    current_sum = 0 if current_sum < 0
   end
 
   max_sum
