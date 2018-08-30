@@ -62,19 +62,16 @@ def largest_contiguous_subsum_2(arr)
 
   arr.each_with_index do |el,idx|
 
-    #update current sum (prev sum + current el)
+    # update current sum (prev sum + current el)
     current_sum += el
-    #check current sum . check el, check max. determine greatest
-    p "current_sum is #{current_sum}"
-    p "current el is #{el}"
-    p "current max is #{max_sum}"
+    # check max. determine greatest
+    # check current sum . check el,
     el_or_sum = current_sum > el ? current_sum : el
-    p "max of the two is #{el_or_sum}"
-    max_sum = el_or_sum if el_or_sum > max_sum
-    #if current sum is less than el. reset current sum
-    #if current el is greater than max, update max
 
-    #this doesn't freaking work
+    # check max. determine greatest
+    max_sum = el_or_sum if el_or_sum > max_sum
+
+    # resets to zero if current sum is less than 0
     current_sum = 0 if current_sum < 0
   end
 
