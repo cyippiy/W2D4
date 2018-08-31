@@ -1,7 +1,4 @@
-def anagram?(str1,str2)
-
-end
-
+# O(n * n!)
 def first_anagram?(string, other_string)
   all_kinds_of_shit = string.split("").permutation
 
